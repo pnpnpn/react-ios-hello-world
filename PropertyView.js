@@ -3,7 +3,7 @@
 var React = require('react-native');
 var {
   StyleSheet,
-  Image, 
+  Image,
   View,
   Text,
   Component
@@ -56,7 +56,7 @@ class PropertyView extends Component {
 
     return (
       <View style={styles.container}>
-        <Image style={styles.image} 
+        <Image style={styles.image}
           source={{uri: property.img_url}} />
         <View style={styles.heading}>
           <Text style={styles.price}>£{price}</Text>

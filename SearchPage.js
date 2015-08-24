@@ -121,22 +121,29 @@ class SearchPage extends Component {
 
   onSearchPressed() {
     var query = urlForQueryAndPage('place_name', this.state.searchString, 1);
+    console.log('HELLO query: ' + query);
     this._executeQuery(query);
   }
 
   onLocationPressed() {
+    //navigator.geolocation.getCurrentPosition(
+    //  location => {
+    //    console.log('HELLO attempting to get location');
+    //    var search = location.coords.latitude + ',' + location.coords.longitude;
+    //    console.log('HELLO location: ' + search);
+    //    this.setState({ searchString: search });
+    //    var query = urlForQueryAndPage('centre_point', search, 1);
+    //    this._executeQuery(query);
+    //  },
+    //  error => {
+    //    this.setState({
+    //      message: 'There was a problem with obtaining your locaton: ' + error
+    //    });
+    //  });
     navigator.geolocation.getCurrentPosition(
-      location => {
-        var search = location.coords.latitude + ',' + location.coords.longitude;
-        this.setState({ searchString: search });
-        var query = urlForQueryAndPage('centre_point', search, 1);
-        this._executeQuery(query);
-      },
-      error => {
-        this.setState({
-          message: 'There was a problem with obtaining your locaton: ' + error
-        });
-      });
+      (initialPosition) => alert('coordinates: ' + JSON.stringify({initialPosition})),
+        (error) => alert(error.message),
+        {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000} );
   }
 
   onSearchTextChanged(event) {
