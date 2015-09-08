@@ -23,8 +23,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		B630CE731B9E3F0E0055AE49 /* libAIBSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B630CE681B9E3D0A0055AE49 /* libAIBSQLite.a */; };
-		B630CE751B9E3F230055AE49 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B630CE741B9E3F230055AE49 /* libsqlite3.dylib */; };
 		B6C91AB31B8BE0EA00617247 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C91AB11B8BE0EA00617247 /* Fabric.framework */; };
 		B6C91AB41B8BE0EA00617247 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C91AB21B8BE0EA00617247 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
@@ -156,8 +154,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B630CE751B9E3F230055AE49 /* libsqlite3.dylib in Frameworks */,
-				B630CE731B9E3F0E0055AE49 /* libAIBSQLite.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,

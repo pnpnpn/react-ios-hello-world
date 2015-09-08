@@ -28,32 +28,58 @@ class PropertyFinderApp extends React.Component {
 //  }
 //}
 
-var sqlite = require('react-native-sqlite');
-sqlite.open("my_first_db.sqlite", function (error, database) {
-  if (error) {
-    console.log("Failed to open database:", error);
-    return;
-  }
-  var sql = "SELECT first, last FROM t1";
-  //var params = ["Smith"];
-  database.executeSQL(sql, [], rowCallback, completeCallback);
-  function rowCallback(rowData) {
-    console.log("Got row data:", rowData);
-  }
-  function completeCallback(error) {
-    if (error) {
-      console.log("Failed to execute query:", error);
-      return
-    }
-    console.log("Query complete!");
-    database.close(function (error) {
-      if (error) {
-        console.log("Failed to close database:", error);
-        return
-      }
-    });
-  }
-})
+//var sqlite = require('react-native-sqlite');
+
+//sqlite.open("my_first_db.sqlite", function (error, database) {
+//  database.executeSQL(
+//    "INSERT INTO t1 (first, last) VALUES ('John',?)",
+//    [(new Date()).toString()], 
+//    null, 
+//    completeCallback);
+//
+//  function completeCallback(error) {
+//    if (error) {
+//      console.log("[write] Failed to execute query:", error);
+//      return
+//    }
+//    console.log("[write] Query complete!");
+//    database.close(function (error) {
+//      if (error) {
+//        console.log("[write] Failed to close database:", error);
+//        return
+//      }
+//    });
+//  }
+//})
+
+//sqlite.open("my_first_db.sqlite", function (error, database) {
+//  if (error) {
+//    console.log("Failed to open database:", error);
+//    return;
+//  }
+//  database.executeSQL(
+//    "SELECT first, last FROM t1", 
+//    [], 
+//    rowCallback, 
+//    completeCallback);
+//
+//  function rowCallback(rowData) {
+//    console.log("Got data:", rowData);
+//  }
+//  function completeCallback(error) {
+//    if (error) {
+//      console.log("Failed to execute query:", error);
+//      return
+//    }
+//    console.log("Query complete!");
+//    database.close(function (error) {
+//      if (error) {
+//        console.log("Failed to close database:", error);
+//        return
+//      }
+//    });
+//  }
+//})
 
 React.AppRegistry.registerComponent('PropertyFinder',
                                     function() { return PropertyFinderApp });
