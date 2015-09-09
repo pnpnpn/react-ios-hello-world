@@ -669,6 +669,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = PropertyFinder;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -692,6 +693,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = PropertyFinder;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
